@@ -8,13 +8,4 @@ import { RouterLink } from "@angular/router";
   styleUrl: './inicio.css',
 })
 export class Inicio {
-  constructor(private renderer: Renderer2) {}
-
-  ngOnInit() {
-    this.renderer.addClass(document.body, 'bg-animate');
-  }
-
-  ngOnDestroy() {
-    this.renderer.removeClass(document.body, 'bg-animate');
-  }
 }

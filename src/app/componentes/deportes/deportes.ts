@@ -8,13 +8,5 @@ import { RouterLink } from "@angular/router";
   styleUrl: './deportes.css',
 })
 export class Deportes {
-  constructor(private renderer: Renderer2) {}
-
-  ngOnInit() {
-    this.renderer.addClass(document.body, 'bg-animate');
-  }
-
-  ngOnDestroy() {
-    this.renderer.removeClass(document.body, 'bg-animate');
-  }
+  
 }

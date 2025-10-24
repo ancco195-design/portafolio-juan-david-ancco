@@ -1,43 +1,33 @@
- <header>
-    <h1 class="fade-in">Bienvenido a mi página</h1>
-    <p class="fade-in">Un espacio donde comparto mi vida, estudios, gastronomía y laboral</p>
+<section class="home-container">
+  <header class="hero">
+    <div class="hero-content">
+      <h1 class="hero-title">Hola, soy <span class="highlight">Tu Nombre</span></h1>
+      <p class="hero-subtitle">Desarrollador | Estudiante | Apasionado por la tecnología</p>
+      <div class="cta-buttons">
+        <button class="btn-primary" routerLink="/sobre-mi">Conoce más</button>
+        <button class="btn-secondary" routerLink="/trabajo">Mi trabajo</button>
+      </div>
+    </div>
+    <div class="scroll-indicator">
+      <span>Explora</span>
+      <div class="arrow-down"></div>
+    </div>
   </header>
 
-  <main>
-    <h2 class="fade-in">Explora mi mundo</h2>
-    <p>Haz clic en cada sección para conocer más sobre mí y mis experiencias.</p>
-
-    <div class="cards">
-      <div class="card">
-        <h3>🙋 Sobre Mí</h3>
-        <p>Conoce más acerca de quién soy y mis metas personales.</p>
-        <a routerLink="/sobre-mi">Ver más</a>
-      </div>
-      <div class="card">
-        <h3>🎓 Universidad</h3>
-        <p>Mi horario, proyectos y aprendizajes durante mi vida universitaria.</p>
-        <a routerLink="/universidad">Ver más</a>
-      </div>
-      
-      <div class="card">
-        <h3>🍲 Gastronomía</h3>
-        <p>Mis platos favoritos y algunas recetas que me encantan.</p>
-        <a routerLink="/gastronomia">Ver más</a>
-      </div>
-
-      <div class="card">
-        <h3>💼 Trabajo</h3>
-        <p>Mi experiencia laboral y en qué estoy trabajando actualmente.</p>
-        <a routerLink="/trabajo">Ver más</a>
-      </div>
-
-     
-      <div class="card">
-        <h3>⚽ Deportes</h3>
-        <p>Mis deportes favoritos y actividades físicas que disfruto.</p>
-        <a routerLink="/deportes">Ver más</a>
-      </div>
-
-      
-    </div>
-  </main>
+  <section class="sections-grid">
+    <a routerLink="/universidad" class="section-card university">
+      <div class="icon">🎓</div>
+      <h3>Universidad</h3>
+    </a>
+    
+    <a routerLink="/gastronomia" class="section-card gastronomy">
+      <div class="icon">🍲</div>
+      <h3>Gastronomía</h3>
+    </a>
+    
+    <a routerLink="/deportes" class="section-card sports">
+      <div class="icon">⚽</div>
+      <h3>Deportes</h3>
+    </a>
+  </section>
+</section>

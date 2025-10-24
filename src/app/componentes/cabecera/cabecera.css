@@ -1,32 +1,51 @@
-.bg-animate {
-  background: linear-gradient(-45deg, #c48a1f, #f5663f, #dbf835, #d0db35);
+
+/* Navegación */
+nav {
+  background: linear-gradient(-45deg, #2a5298, #1e3c72, #4a90e2, #2a5298);
   background-size: 400% 400%;
   animation: gradientBG 15s ease infinite;
+  padding: 18px 20px;
+  display: flex;
+  justify-content: center;
+  gap: 35px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.1rem;
+  padding: 8px 16px;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+nav a:hover {
+  color: #ffd700;
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateY(-2px);
+}
+
+nav a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background: #ffd700;
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+}
+
+nav a:hover::after {
+  width: 80%;
 }
 
 @keyframes gradientBG {
   0% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }
   100% { background-position: 0% 50%; }
-}
-
-
-/* Navegación */
-nav {
-  background: linear-gradient(90deg, #2a5298, #1e3c72);
-  padding: 10px;
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-}
-
-nav a {
-  color: #fff;
-  text-decoration: none;
-  font-weight: bold;
-  transition: 0.3s;
-}
-
-nav a:hover {
-  color: #ffd700;
 }
