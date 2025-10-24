@@ -15,4 +15,5 @@ export const routes: Routes = [
     { path:'deportes', component:Deportes, title:'Deportes'},
     { path:'', component:Inicio, title:'Inicio'},
     { path:'', component:Inicio, title:'Inicio'},
+    {path: '*', redirectTo: ''},
 ];

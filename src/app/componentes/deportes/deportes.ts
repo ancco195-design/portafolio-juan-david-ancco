@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit, OnDestroy, Renderer2 } from '@angular/core';
 
 @Component({
   selector: 'app-deportes',
@@ -7,5 +7,13 @@ import { Component } from '@angular/core';
   styleUrl: './deportes.css',
 })
 export class Deportes {
+  constructor(private renderer: Renderer2) {}
 
+  ngOnInit() {
+    this.renderer.addClass(document.body, 'bg-animate');
+  }
+
+  ngOnDestroy() {
+    this.renderer.removeClass(document.body, 'bg-animate');
+  }
 }

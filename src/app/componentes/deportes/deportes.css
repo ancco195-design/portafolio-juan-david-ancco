@@ -159,3 +159,15 @@ h2 {
 .fade-in {
   animation: fadeIn 1s ease-in-out;
 }
+
+.bg-animate {
+  background: linear-gradient(-45deg, #c48a1f, #f5663f, #dbf835, #d0db35);
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite;
+}
+
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
