@@ -1,0 +1,58 @@
+<div class="contenedor">
+    <h1 class="fade-in">Andahuaylas - Tierra de los Chankas</h1>
+    
+    <div class="contenido">
+        <div class="texto">
+            <p>
+                Andahuaylas es una ciudad ubicada en la región Apurímac, Perú, conocida como la 
+                <b>“Tierra de los Chankas”</b>. Su historia se remonta a épocas preincaicas, 
+                cuando fue habitada por la cultura Chanka, un pueblo valiente que desafió al 
+                imperio incaico. Con el paso de los siglos, la ciudad se consolidó como un 
+                importante centro agrícola y comercial en la sierra sur del Perú.
+            </p>
+            <p>
+                La provincia de Andahuaylas fue fundada oficialmente en la época republicana, 
+                pero sus raíces culturales son mucho más antiguas. Actualmente cuenta con una 
+                población diversa que mantiene vivas sus tradiciones, fiestas patronales, danzas 
+                típicas y una gastronomía reconocida a nivel nacional. Su gente es hospitalaria, 
+                orgullosa de su tierra, y siempre celebra con música, color y alegría.
+            </p>
+            <p>
+                Rodeada de imponentes montañas, lagunas y valles fértiles, Andahuaylas es también 
+                un destino turístico en crecimiento. La <b>laguna de Pacucha</b>, el complejo 
+                arqueológico de <b>Sondor</b> y sus paisajes naturales la convierten en un lugar 
+                lleno de historia y belleza.
+            </p>
+        </div>
+
+        <div class="imagen">
+            <img src="../../imagenes/andahuaylas.jpg" alt="Andahuaylas">
+        </div>
+    </div>
+
+    <hr>
+
+    <h2>Galería de Imágenes</h2>
+    <p>Sube tus fotos de Andahuaylas y aparecerán aquí:</p>
+
+    <input type="file" id="inputImagen" multiple accept="image/*">
+    <div class="galeria" id="galeria"></div>
+</div>
+
+<script>
+    const input = document.getElementById("inputImagen");
+    const galeria = document.getElementById("galeria");
+
+    input.addEventListener("change", () => {
+        galeria.innerHTML = ""; 
+        for (let archivo of input.files) {
+            const lector = new FileReader();
+            lector.onload = (e) => {
+                const img = document.createElement("img");
+                img.src = e.target.result;
+                galeria.appendChild(img);
+            };
+            lector.readAsDataURL(archivo);
+        }
+    });
+</script>

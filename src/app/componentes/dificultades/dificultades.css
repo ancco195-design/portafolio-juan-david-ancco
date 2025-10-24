@@ -1,0 +1,68 @@
+/* Encabezado */
+header {
+  background: linear-gradient(135deg, #4a90e2, #95aa1c);
+  color: white;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+header p {
+  font-size: 1.2rem;
+  opacity: 0.9;
+}
+
+/* Sección principal */
+main {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 20px;
+  text-align: center;
+}
+
+main h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+  color: #1c3faa;
+}
+
+main p {
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+}
+
+/* ---- ESTILOS DIFICULTADES ---- */
+.dificultades {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.dificultades article {
+  background: #f9f9f9;
+  padding: 20px;
+  border-left: 6px solid #4CAF50;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.dificultades h2 {
+  margin-top: 0;
+  color: #4CAF50;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.fade-in {
+  animation: fadeIn 1s ease-in-out;
+}
