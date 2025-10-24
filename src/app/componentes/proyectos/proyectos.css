@@ -1,70 +1,104 @@
-/* Encabezado */
-header {
-  background: linear-gradient(135deg, #4a90e2, #95aa1c);
-  color: white;
-  padding: 40px 20px;
-  text-align: center;
-}
-
-header h1 {
-  font-size: 2.5rem;
-  margin-bottom: 10px;
-}
-
-header p {
-  font-size: 1.2rem;
-  opacity: 0.9;
-}
-
-
-/* Sección principal */
-main {
-  max-width: 900px;
-  margin: 40px auto;
+/* Container principal */
+.universidad-container {
+  max-width: 1100px;
+  margin: 50px auto;
   padding: 20px;
-  text-align: center;
 }
 
-main h2 {
-  font-size: 2rem;
-  margin-bottom: 15px;
+/* Secciones */
+.seccion-universidad {
+  margin-bottom: 80px;
+}
+
+.titulo-seccion {
+  font-size: 2.5rem;
   color: #1c3faa;
+  text-align: center;
+  margin-bottom: 40px;
+  font-weight: 600;
 }
 
-main p {
-  font-size: 1.1rem;
+.contenido-seccion {
   margin-bottom: 30px;
 }
-/* ---- ESTILOS BOTONES PROYECTOS ---- */
-.proyectos-botones {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  max-width: 600px;
-  margin: 50px auto;
+
+/* ===== PROYECTOS ===== */
+.proyecto {
+  margin-bottom: 50px;
+  background: white;
+  border-radius: 15px;
+  padding: 35px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
 }
 
-.btn-proyecto {
-  display: block;
-  background: #2196F3;
-  color: white;
-  text-decoration: none;
-  padding: 18px;
-  font-size: 18px;
-  font-weight: bold;
+.proyecto-titulo {
+  font-size: 1.8rem;
+  color: #4a90e2;
+  margin-bottom: 25px;
   text-align: center;
-  border-radius: 10px;
-  transition: background 0.3s ease, transform 0.2s ease;
+  font-weight: 600;
 }
 
-.btn-proyecto:hover {
-  background: #1976D2;
-  transform: scale(1.05);
+.proyecto-detalle {
+  display: flex;
+  align-items: flex-start;
+  gap: 35px;
 }
 
+.proyecto-texto {
+  flex: 1.5;
+  font-size: 1.05rem;
+  line-height: 1.8;
+  text-align: justify;
+  color: #444;
+}
+
+.proyecto-texto p {
+  margin-bottom: 18px;
+}
+
+.proyecto-texto p:last-child {
+  margin-bottom: 0;
+}
+
+.proyecto-texto strong {
+  color: #1c3faa;
+  font-weight: 600;
+}
+
+.proyecto-texto em {
+  color: #4a90e2;
+  font-style: italic;
+}
+
+.proyecto-imagen {
+  flex: 1;
+  text-align: center;
+}
+
+.proyecto-imagen img {
+  width: 100%;
+  max-width: 350px;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease;
+}
+
+.proyecto-imagen img:hover {
+  transform: scale(1.04);
+}
+
+
+/* Animación */
 @keyframes fadeIn {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
+  from { 
+    opacity: 0; 
+    transform: translateY(20px); 
+  }
+  to { 
+    opacity: 1; 
+    transform: translateY(0); 
+  }
 }
 
 .fade-in {

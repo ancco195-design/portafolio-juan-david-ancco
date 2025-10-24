@@ -1,60 +1,70 @@
 /* Encabezado */
-header {
+.header {
   background: linear-gradient(135deg, #4a90e2, #95aa1c);
   color: white;
-  padding: 40px 20px;
+  padding: 50px 20px;
   text-align: center;
 }
 
-header h1 {
-  font-size: 2.5rem;
-  margin-bottom: 10px;
+.header h1 {
+  font-size: 3rem;
+  margin-bottom: 12px;
+  font-weight: 600;
 }
 
-header p {
-  font-size: 1.2rem;
+.header p {
+  font-size: 1.3rem;
   opacity: 0.9;
 }
 
-/* Sección principal */
-main {
-  max-width: 900px;
-  margin: 40px auto;
+/* Container principal */
+.universidad-container {
+  max-width: 1100px;
+  margin: 50px auto;
   padding: 20px;
-  text-align: center;
 }
 
-main h2 {
-  font-size: 2rem;
-  margin-bottom: 15px;
+/* Secciones */
+.seccion-universidad {
+  margin-bottom: 80px;
+}
+
+.titulo-seccion {
+  font-size: 2.5rem;
   color: #1c3faa;
+  text-align: center;
+  margin-bottom: 40px;
+  font-weight: 600;
 }
 
-main p {
-  font-size: 1.1rem;
+.contenido-seccion {
   margin-bottom: 30px;
 }
-/* ---- ESTILOS HORARIO ---- */
+
+/* ===== HORARIO ===== */
 table.horario {
-  width: 80%;
-  margin: 40px auto;
+  width: 100%;
+  margin: 0 auto;
   border-collapse: collapse;
   font-size: 16px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.12);
   background-color: white;
+  border-radius: 10px;
+  overflow: hidden;
 }
 
 table.horario caption {
-  margin-bottom: 10px;
+  margin-bottom: 20px;
   font-weight: bold;
-  font-size: 18px;
+  font-size: 1.5rem;
   color: #333;
+  padding: 10px;
 }
 
 table.horario th, 
 table.horario td {
-  border: 1px solid #ccc;
-  padding: 12px;
+  border: 1px solid #ddd;
+  padding: 16px 12px;
   text-align: center;
 }
 
@@ -62,16 +72,49 @@ table.horario th {
   background-color: #4CAF50;
   color: white;
   text-transform: uppercase;
+  font-weight: 600;
+  font-size: 0.95rem;
+  letter-spacing: 0.5px;
 }
 
-table.horario tr:nth-child(even) {
+table.horario tbody tr:nth-child(odd) {
   background-color: #f9f9f9;
 }
 
+table.horario tbody tr:nth-child(even) {
+  background-color: #ffffff;
+}
 
+table.horario tbody tr:hover {
+  background-color: #e8f5e9;
+  transition: background-color 0.3s ease;
+}
+
+table.horario tbody tr.almuerzo {
+  background-color: #fff3cd;
+  font-weight: 600;
+}
+
+table.horario tbody tr.almuerzo:hover {
+  background-color: #ffe69c;
+}
+
+table.horario td:first-child {
+  font-weight: 600;
+  color: #555;
+  background-color: #f5f5f5;
+}
+
+/* Animación */
 @keyframes fadeIn {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
+  from { 
+    opacity: 0; 
+    transform: translateY(20px); 
+  }
+  to { 
+    opacity: 1; 
+    transform: translateY(0); 
+  }
 }
 
 .fade-in {

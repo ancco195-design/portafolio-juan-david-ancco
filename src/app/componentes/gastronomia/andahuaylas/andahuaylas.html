@@ -29,30 +29,4 @@
             <img src="../../imagenes/andahuaylas.jpg" alt="Andahuaylas">
         </div>
     </div>
-
-    <hr>
-
-    <h2>Galería de Imágenes</h2>
-    <p>Sube tus fotos de Andahuaylas y aparecerán aquí:</p>
-
-    <input type="file" id="inputImagen" multiple accept="image/*">
-    <div class="galeria" id="galeria"></div>
 </div>
-
-<script>
-    const input = document.getElementById("inputImagen");
-    const galeria = document.getElementById("galeria");
-
-    input.addEventListener("change", () => {
-        galeria.innerHTML = ""; 
-        for (let archivo of input.files) {
-            const lector = new FileReader();
-            lector.onload = (e) => {
-                const img = document.createElement("img");
-                img.src = e.target.result;
-                galeria.appendChild(img);
-            };
-            lector.readAsDataURL(archivo);
-        }
-    });
-</script>

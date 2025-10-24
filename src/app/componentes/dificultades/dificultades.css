@@ -1,66 +1,72 @@
-/* Encabezado */
-header {
-  background: linear-gradient(135deg, #4a90e2, #95aa1c);
-  color: white;
-  padding: 40px 20px;
-  text-align: center;
-}
-
-header h1 {
-  font-size: 2.5rem;
-  margin-bottom: 10px;
-}
-
-header p {
-  font-size: 1.2rem;
-  opacity: 0.9;
-}
-
-/* Sección principal */
-main {
-  max-width: 900px;
-  margin: 40px auto;
+/* Container principal */
+.universidad-container {
+  max-width: 1100px;
+  margin: 50px auto;
   padding: 20px;
-  text-align: center;
 }
 
-main h2 {
-  font-size: 2rem;
-  margin-bottom: 15px;
+/* Secciones */
+.seccion-universidad {
+  margin-bottom: 80px;
+}
+
+.titulo-seccion {
+  font-size: 2.5rem;
   color: #1c3faa;
+  text-align: center;
+  margin-bottom: 40px;
+  font-weight: 600;
 }
 
-main p {
-  font-size: 1.1rem;
+.contenido-seccion {
   margin-bottom: 30px;
 }
 
-/* ---- ESTILOS DIFICULTADES ---- */
-.dificultades {
-  max-width: 900px;
-  margin: 40px auto;
-  padding: 20px;
+/* ===== DIFICULTADES ===== */
+.dificultades-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
 }
 
-.dificultades article {
-  background: #f9f9f9;
-  padding: 20px;
-  border-left: 6px solid #4CAF50;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+.dificultad {
+  background: white;
+  padding: 30px;
+  border-left: 5px solid #4CAF50;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease;
 }
 
-.dificultades h2 {
-  margin-top: 0;
+.dificultad:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+}
+
+.dificultad h3 {
   color: #4CAF50;
+  margin-bottom: 15px;
+  font-size: 1.3rem;
+  font-weight: 600;
 }
 
+.dificultad p {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #555;
+  text-align: justify;
+}
+
+/* Animación */
 @keyframes fadeIn {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
+  from { 
+    opacity: 0; 
+    transform: translateY(20px); 
+  }
+  to { 
+    opacity: 1; 
+    transform: translateY(0); 
+  }
 }
 
 .fade-in {

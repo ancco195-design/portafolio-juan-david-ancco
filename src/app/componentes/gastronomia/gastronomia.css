@@ -1,98 +1,93 @@
 /* Encabezado */
-header {
+.header {
   background: linear-gradient(135deg, #4a90e2, #95aa1c);
   color: white;
-  padding: 40px 20px;
+  padding: 50px 20px;
   text-align: center;
 }
 
-header h1 {
-  font-size: 2.5rem;
-  margin-bottom: 10px;
+.header h1 {
+  font-size: 2.8rem;
+  margin-bottom: 12px;
+  font-weight: 600;
 }
 
-header p {
-  font-size: 1.2rem;
-  opacity: 0.9;
+.header p {
+  font-size: 1.3rem;
+  opacity: 0.95;
+  font-weight: 300;
 }
 
-/* Sección principal */
-main {
-  max-width: 900px;
-  margin: 40px auto;
+/* Main */
+.gastronomia-main {
+  max-width: 1000px;
+  margin: 0 auto;
   padding: 20px;
-  text-align: center;
 }
 
-main h2 {
-  font-size: 2rem;
-  margin-bottom: 15px;
-  color: #1c3faa;
-}
-
-main p {
-  font-size: 1.1rem;
-  margin-bottom: 30px;
-}
-
-/* ---- INTRODUCCIÓN GASTRONOMÍA ---- */
+/* Introducción Gastronomía */
 .intro-gastro {
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
   max-width: 1000px;
-  margin: 40px auto;
-  padding: 20px;
-  gap: 30px;
+  margin: 50px auto;
+  padding: 30px;
+  gap: 40px;
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
 }
 
 .intro-texto {
   flex: 2;
   text-align: justify;
-  line-height: 1.6;
-}
-
-.intro-imagen {
-  flex: 1;
-  text-align: center;
-}
-
-.intro-imagen img {
-  width: 100%;
-  max-width: 350px;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-}
-
-.pie-imagen {
-  font-size: 0.9em;
-  color: #555;
-  margin-top: 5px;
-}
-/* ---- ESTILOS GASTRONOMÍA (intro + platos) ---- */
-
-/* Intro (Andahuaylas) */
-.intro-gastro {
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  max-width: 1000px;
-  margin: 40px auto;
-  padding: 20px;
-  gap: 30px;
-}
-
-.intro-texto {
-  flex: 2;
-  text-align: justify;
-  line-height: 1.6;
-  font-size: 16px;
+  line-height: 1.8;
+  font-size: 1.05rem;
   color: #333;
 }
 
+.intro-texto p {
+  margin-bottom: 20px;
+}
+
+.intro-texto p:last-child {
+  margin-bottom: 0;
+}
+
+.intro-texto strong {
+  color: #1c3faa;
+  font-weight: 600;
+}
+
+.intro-texto em {
+  color: #d35400;
+  font-style: italic;
+}
+
+/* Enlaces a platos */
+.link-plato {
+  color: #1c6fb8;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 2px 6px;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.link-plato:hover {
+  background: #e3f2fd;
+  color: #0b4f86;
+  text-decoration: none;
+}
+
+/* Imagen */
 .intro-imagen {
   flex: 1;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .intro-imagen img {
@@ -100,34 +95,65 @@ main p {
   max-width: 350px;
   height: auto;
   border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
   display: block;
-  margin: 0 auto;
+  transition: transform 0.3s ease;
+}
+
+.intro-imagen img:hover {
+  transform: scale(1.03);
 }
 
 .pie-imagen {
   font-size: 0.9rem;
-  color: #555;
-  margin-top: 8px;
+  color: #666;
+  margin-top: 10px;
+  font-style: italic;
 }
 
-/* Enlaces en el texto (ej.: nombres de platos en la intro) */
-a {
-  color: #1c6fb8;
-  text-decoration: none;
-  font-weight: 600;
-}
-
-a:hover {
-  text-decoration: underline;
-  color: #0b4f86;
-}
-
+/* Animación */
 @keyframes fadeIn {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
+  from { 
+    opacity: 0; 
+    transform: translateY(20px); 
+  }
+  to { 
+    opacity: 1; 
+    transform: translateY(0); 
+  }
 }
 
 .fade-in {
   animation: fadeIn 1s ease-in-out;
+}
+
+/* Responsive */
+@media (max-width: 800px) {
+  .header h1 {
+    font-size: 2.2rem;
+  }
+
+  .header p {
+    font-size: 1.1rem;
+  }
+
+  .intro-gastro {
+    flex-direction: column;
+    padding: 20px;
+    margin: 30px auto;
+    gap: 25px;
+  }
+
+  .intro-texto {
+    font-size: 1rem;
+    line-height: 1.7;
+  }
+
+  .intro-imagen img {
+    max-width: 100%;
+  }
+
+  .gastronomia-main {
+    padding: 15px;
+  }
 }

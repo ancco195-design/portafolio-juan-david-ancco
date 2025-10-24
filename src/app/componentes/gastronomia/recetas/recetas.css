@@ -1,0 +1,148 @@
+/* Container principal */
+.gastronomia-container {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 20px;
+}
+
+/* Secciones */
+.seccion-receta {
+  margin-bottom: 60px;
+}
+
+.titulo-receta {
+  font-size: 2rem;
+  color: #1c3faa;
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+.subtitulo-receta {
+  font-size: 1.1rem;
+  color: #666;
+  text-align: center;
+  margin-bottom: 25px;
+  font-style: italic;
+}
+
+/* Plato */
+.plato {
+  display: flex;
+  align-items: flex-start;
+  gap: 24px;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 22px;
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+}
+
+.plato img {
+  width: 350px;
+  max-width: 40%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+  object-fit: cover;
+}
+
+.plato div {
+  flex: 1;
+  text-align: justify;
+  line-height: 1.7;
+  font-size: 16px;
+  color: #333;
+}
+
+.plato h3 {
+  color: #d35400;
+  margin-top: 18px;
+  margin-bottom: 12px;
+  font-size: 1.3rem;
+}
+
+.plato h3:first-child {
+  margin-top: 0;
+}
+
+.plato p {
+  margin-bottom: 15px;
+}
+
+.plato strong {
+  color: #1c3faa;
+  font-weight: 600;
+}
+
+.plato em {
+  color: #d35400;
+  font-style: italic;
+}
+
+.plato ul {
+  margin-left: 1.05rem;
+  margin-bottom: 12px;
+}
+
+.plato ul li {
+  margin-bottom: 6px;
+}
+
+/* Animación */
+@keyframes fadeIn {
+  from { 
+    opacity: 0; 
+    transform: translateY(20px); 
+  }
+  to { 
+    opacity: 1; 
+    transform: translateY(0); 
+  }
+}
+
+.fade-in {
+  animation: fadeIn 1s ease-in-out;
+}
+
+/* Responsive */
+@media (max-width: 800px) {
+  .gastronomia-container {
+    padding: 15px;
+  }
+
+  .seccion-receta {
+    margin-bottom: 50px;
+  }
+
+  .titulo-receta {
+    font-size: 1.8rem;
+  }
+
+  .subtitulo-receta {
+    font-size: 1rem;
+  }
+
+  .plato {
+    flex-direction: column;
+    padding: 16px;
+    gap: 16px;
+  }
+
+  .plato div {
+    width: 100%;
+  }
+
+  .plato img {
+    max-width: 90%;
+    width: 100%;
+  }
+
+  .header h1 {
+    font-size: 2rem;
+  }
+
+  .header p {
+    font-size: 1rem;
+  }
+}
