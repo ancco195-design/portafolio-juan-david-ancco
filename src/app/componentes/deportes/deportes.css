@@ -1,0 +1,161 @@
+/* Encabezado */
+header {
+  background: linear-gradient(135deg, #4a90e2, #95aa1c);
+  color: white;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+header p {
+  font-size: 1.2rem;
+  opacity: 0.9;
+}
+
+
+/* Sección principal */
+main {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 20px;
+  text-align: center;
+}
+
+main h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+  color: #1c3faa;
+}
+
+main p {
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+}
+
+
+/* Sección Deportes */
+.deportes {
+  max-width: 800px;
+  margin: 40px auto;
+  text-align: center;
+}
+
+.lista-deportes {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 15px;
+  margin: 20px 0;
+}
+
+.deporte {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  font-size: 18px;
+  font-weight: bold;
+  transition: transform 0.2s;
+}
+
+.deporte:hover {
+  transform: translateY(-5px);
+}
+
+/* Botón */
+.btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background: #4facfe;
+  color: white;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #00c6ff;
+}
+
+/* pequeñas mejoras en tipografía y espaciado */
+header h1, header p {
+  text-align: center;
+}
+
+/* Enlaces en el texto (ej.: nombres de platos en la intro) */
+a {
+  color: #1c6fb8;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: #0b4f86;
+}
+
+.contenedor {
+    max-width: 1000px;
+    margin: 30px auto;
+    background: #fff;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0px 6px 15px rgba(0,0,0,0.2);
+}
+
+.contenedor h1 {
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+.contenido {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.texto {
+    flex: 2;
+    font-size: 18px;
+    line-height: 1.6;
+    text-align: justify;
+    color: #333;
+}
+
+.imagen {
+    flex: 1;
+}
+
+.imagen img {
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.3);
+}
+
+h2 {
+    margin-top: 25px;
+    color: #34495e;
+}
+
+#inputImagen {
+    margin: 15px 0;
+    padding: 8px;
+    border-radius: 8px;
+    border: 1px solid #bbb;
+    cursor: pointer;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.fade-in {
+  animation: fadeIn 1s ease-in-out;
+}

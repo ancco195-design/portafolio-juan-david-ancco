@@ -1,0 +1,33 @@
+
+/* ---------- FOOTER ---------- */
+footer {
+  background: #333;
+  color: #fff;
+  text-align: center;
+  padding: 15px;
+  margin-top: 30px;
+}
+.zoom:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+}
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.fade-in {
+  animation: fadeIn 1s ease-in-out;
+}
+.bg-animate {
+  background: linear-gradient(-45deg, #c48a1f, #f5663f, #dbf835, #d0db35);
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite;
+}
+
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+

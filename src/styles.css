@@ -1,1 +1,36 @@
 /* You can add global styles to this file, and also import other style files */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f9f9fb;
+  color: #333;
+  line-height: 1.6;
+}
+
+
+/* Sección principal */
+main {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 20px;
+  text-align: center;
+}
+
+main h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+  color: #1c3faa;
+}
+
+main p {
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+}
+
+/**/
+

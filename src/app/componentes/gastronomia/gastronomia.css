@@ -1,0 +1,124 @@
+/* Encabezado */
+header {
+  background: linear-gradient(135deg, #4a90e2, #95aa1c);
+  color: white;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+header p {
+  font-size: 1.2rem;
+  opacity: 0.9;
+}
+
+/* Sección principal */
+main {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 20px;
+  text-align: center;
+}
+
+main h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+  color: #1c3faa;
+}
+
+main p {
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+}
+
+/* ---- INTRODUCCIÓN GASTRONOMÍA ---- */
+.intro-gastro {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 20px;
+  gap: 30px;
+}
+
+.intro-texto {
+  flex: 2;
+  text-align: justify;
+  line-height: 1.6;
+}
+
+.intro-imagen {
+  flex: 1;
+  text-align: center;
+}
+
+.intro-imagen img {
+  width: 100%;
+  max-width: 350px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.pie-imagen {
+  font-size: 0.9em;
+  color: #555;
+  margin-top: 5px;
+}
+/* ---- ESTILOS GASTRONOMÍA (intro + platos) ---- */
+
+/* Intro (Andahuaylas) */
+.intro-gastro {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 20px;
+  gap: 30px;
+}
+
+.intro-texto {
+  flex: 2;
+  text-align: justify;
+  line-height: 1.6;
+  font-size: 16px;
+  color: #333;
+}
+
+.intro-imagen {
+  flex: 1;
+  text-align: center;
+}
+
+.intro-imagen img {
+  width: 100%;
+  max-width: 350px;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  display: block;
+  margin: 0 auto;
+}
+
+.pie-imagen {
+  font-size: 0.9rem;
+  color: #555;
+  margin-top: 8px;
+}
+
+/* Enlaces en el texto (ej.: nombres de platos en la intro) */
+a {
+  color: #1c6fb8;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: #0b4f86;
+}

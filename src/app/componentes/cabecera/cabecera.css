@@ -1,0 +1,32 @@
+.bg-animate {
+  background: linear-gradient(-45deg, #c48a1f, #f5663f, #dbf835, #d0db35);
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite;
+}
+
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+
+/* Navegación */
+nav {
+  background: linear-gradient(90deg, #2a5298, #1e3c72);
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  color: #ffd700;
+}
