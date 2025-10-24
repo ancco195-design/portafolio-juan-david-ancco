@@ -42,3 +42,52 @@
 .fade-in {
   animation: fadeIn 1s ease-in-out;
 }
+
+/* ========================================
+   LOADING - Animación de carga
+   ======================================== */
+
+.loading-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+/* Spinner giratorio */
+.spinner {
+  width: 60px;
+  height: 60px;
+  border: 6px solid rgba(102, 126, 234, 0.2);
+  border-top: 6px solid #667eea;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-bottom: 25px;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Texto de carga */
+.loading-texto {
+  font-size: 1.5rem;
+  color: #667eea;
+  font-weight: 600;
+  margin-bottom: 10px;
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+.loading-subtexto {
+  font-size: 1.1rem;
+  color: #666;
+  font-style: italic;
+}

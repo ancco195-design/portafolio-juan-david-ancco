@@ -1,12 +1,24 @@
+<!-- src/app/components/universidad/universidad.component.html -->
+
 <header class="header">
-    <h1 class="fade-in">🎓 Mi Vida Universitaria</h1>
-    <p>Aquí comparto mi experiencia como estudiante en la Universidad José María Arguedas.</p>
+  <h1 class="fade-in">🎓 Mi Vida Universitaria</h1>
+  <p>Aquí comparto mi experiencia como estudiante en la Universidad José María Arguedas.</p>
 </header>
 
 <main class="universidad-container">
 
-  <app-horario></app-horario>
-  <app-proyectos></app-proyectos>
-  <app-dificultades></app-dificultades>
+  <!-- LOADING: Se muestra mientras carga (controlado con *ngIf) -->
+  <div *ngIf="cargando" class="loading-container">
+    <div class="spinner"></div>
+    <p class="loading-texto">⏳ Cargando información universitaria...</p>
+    <p class="loading-subtexto">Por favor espera un momento</p>
+  </div>
+
+  <!-- CONTENIDO: Se muestra cuando ya cargó (controlado con *ngIf) -->
+  <div *ngIf="datosListos">
+    <app-horario></app-horario>
+    <app-proyectos></app-proyectos>
+    <app-dificultades></app-dificultades>
+  </div>
 
 </main>
