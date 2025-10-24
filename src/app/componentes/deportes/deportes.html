@@ -1,10 +1,19 @@
+<!-- src/app/components/deportes/deportes.component.html -->
+
 <header>
   <h1 class="fade-in">⚽🚴 Mis Deportes Favoritos</h1>
   <p>Estos son los deportes que más practico y me apasionan</p>
 </header>
 
 <main class="deportes">
-  <!-- Fútbol -->
+
+  <!-- *ngIf: Solo muestra este mensaje si mostrarMensaje es true -->
+  <div *ngIf="mostrarMensaje" class="mensaje-bienvenida">
+    <p>👋 ¡Bienvenido a mi página de deportes!</p>
+    <button (click)="cerrarMensaje()">✖ Cerrar</button>
+  </div>
+
+  <!-- ========== FÚTBOL ========== -->
   <section class="deporte-card">
     <div class="deporte-header">
       <span class="icono-deporte">⚽</span>
@@ -24,72 +33,29 @@
     </header>
 
     <div class="grid-deportes">
-      <div class="tarjeta">
+      
+      <!-- *ngFor: Repite esta tarjeta por cada futbolista -->
+      <div *ngFor="let futbolista of futbolistas; let i = index" class="tarjeta">
+        
         <div class="tarjeta-imagen">
-          <img src="../../imagenes/lionel messi.jpeg" alt="Lionel Messi">
+          <img [src]="futbolista.imagen" [alt]="futbolista.nombre">
         </div>
-        <a href="https://es.wikipedia.org/wiki/Lionel_Messi" target="_blank" class="tarjeta-link">
-          Lionel Messi
+        
+        <!-- [ngClass]: Si el índice es par, aplica la clase 'link-destacado' -->
+        <a 
+          [href]="futbolista.link" 
+          target="_blank" 
+          class="tarjeta-link"
+          [ngClass]="{'link-destacado': i % 2 === 0}">
+          {{ futbolista.nombre }}
         </a>
+        
       </div>
 
-      <div class="tarjeta">
-        <div class="tarjeta-imagen">
-          <img src="../../imagenes/lucho.jpeg" alt="Luis Suárez">
-        </div>
-        <a href="https://es.wikipedia.org/wiki/Luis_Su%C3%A1rez_D%C3%ADaz" target="_blank" class="tarjeta-link">
-          Luis Suárez
-        </a>
-      </div>
-
-      <div class="tarjeta">
-        <div class="tarjeta-imagen">
-          <img src="../../imagenes/neymar.jpg" alt="Neymar">
-        </div>
-        <a href="https://es.wikipedia.org/wiki/Neymar" target="_blank" class="tarjeta-link">
-          Neymar
-        </a>
-      </div>
-
-      <div class="tarjeta">
-        <div class="tarjeta-imagen">
-          <img src="../../imagenes/lamine.jpeg" alt="Lamine Yamal">
-        </div>
-        <a href="https://es.wikipedia.org/wiki/Lamine_Yamal" target="_blank" class="tarjeta-link">
-          Lamine Yamal
-        </a>
-      </div>
-
-      <div class="tarjeta">
-        <div class="tarjeta-imagen">
-          <img src="../../imagenes/pedri.jpg" alt="Pedri">
-        </div>
-        <a href="https://es.wikipedia.org/wiki/Pedri" target="_blank" class="tarjeta-link">
-          Pedri
-        </a>
-      </div>
-
-      <div class="tarjeta">
-        <div class="tarjeta-imagen">
-          <img src="../../imagenes/paolo.jpeg" alt="Paolo Guerrero">
-        </div>
-        <a href="https://es.wikipedia.org/wiki/Paolo_Guerrero" target="_blank" class="tarjeta-link">
-          Paolo Guerrero
-        </a>
-      </div>
-
-      <div class="tarjeta">
-        <div class="tarjeta-imagen">
-          <img src="../../imagenes/braca.png" alt="FC Barcelona">
-        </div>
-        <a href="https://es.wikipedia.org/wiki/Futbol_Club_Barcelona" target="_blank" class="tarjeta-link">
-          FC Barcelona
-        </a>
-      </div>
     </div>
   </section>
 
-  <!-- Ciclismo -->
+  <!-- ========== CICLISMO ========== -->
   <section class="deporte-card">
     <div class="deporte-header">
       <span class="icono-deporte">🚴</span>
@@ -109,23 +75,26 @@
     </header>
 
     <div class="grid-deportes">
-      <div class="tarjeta">
+      
+      <!-- *ngFor: Repite esta tarjeta por cada ciclista -->
+      <div *ngFor="let ciclista of ciclistas; let j = index" class="tarjeta">
+        
         <div class="tarjeta-imagen">
-          <img src="../../imagenes/Jackson Goldstone.jpg" alt="Jackson Goldstone">
+          <img [src]="ciclista.imagen" [alt]="ciclista.nombre">
         </div>
-        <a href="https://en.wikipedia.org/wiki/Jackson_Goldstone" target="_blank" class="tarjeta-link">
-          Jackson Goldstone
+        
+        <!-- [ngStyle]: Cambia el color de fondo según el índice -->
+        <a 
+          [href]="ciclista.link" 
+          target="_blank" 
+          class="tarjeta-link"
+          [ngStyle]="{'background-color': j === 0 ? '#e8f4f8' : '#fff4e6'}">
+          {{ ciclista.nombre }}
         </a>
+        
       </div>
 
-      <div class="tarjeta">
-        <div class="tarjeta-imagen">
-          <img src="../../imagenes/Danny_Hart.jpg" alt="Danny Hart">
-        </div>
-        <a href="https://en.wikipedia.org/wiki/Danny_Hart" target="_blank" class="tarjeta-link">
-          Danny Hart
-        </a>
-      </div>
     </div>
   </section>
+
 </main>

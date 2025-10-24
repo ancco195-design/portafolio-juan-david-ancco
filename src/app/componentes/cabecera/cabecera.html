@@ -1,10 +1,10 @@
 <header>
-    <nav class="bg-animate">
-            <a routerLink="">Inicio</a>
-            <a routerLink="/sobre-mi">Sobre Mí</a>
-            <a routerLink="/universidad">Universidad</a>
-            <a routerLink="/gastronomia">Gastronomía</a>
-            <a routerLink="/trabajo">Trabajo</a>
-            <a routerLink="/deportes">Deportes</a>
-    </nav>
+  <nav class="bg-animate">
+    <a routerLink="" routerLinkActive="activo" [routerLinkActiveOptions]="{ exact:true }">Inicio</a>
+    <a routerLink="/sobre-mi" routerLinkActive="activo">Sobre Mí</a>
+    <a routerLink="/universidad" routerLinkActive="activo">Universidad</a>
+    <a routerLink="/gastronomia" routerLinkActive="activo">Gastronomía</a>
+    <a routerLink="/trabajo" routerLinkActive="activo">Trabajo</a>
+    <a routerLink="/deportes" routerLinkActive="activo">Deportes</a>
+  </nav>
 </header>
