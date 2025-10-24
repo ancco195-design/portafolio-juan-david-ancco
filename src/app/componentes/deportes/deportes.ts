@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { RouterLink } from "@angular/router";
+// RouterLink removed because template doesn't use router directives
 import { Deportista } from '../../modelos/deporte';
 import { DeportesService } from '../../servicios/deportes.service';
 import { CommonModule } from '@angular/common';
@@ -7,7 +7,7 @@ import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-deportes',
-  imports: [RouterLink, CommonModule, FormsModule],
+  imports: [CommonModule, FormsModule],
   templateUrl: './deportes.html',
   styleUrl: './deportes.css',
 })

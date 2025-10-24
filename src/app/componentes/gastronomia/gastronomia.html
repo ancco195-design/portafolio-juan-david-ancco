@@ -1,9 +1,20 @@
+<!-- src/app/components/gastronomia/gastronomia.component.html -->
+
 <header class="header">
   <h1 class="fade-in">🍲 Gastronomía de Andahuaylas</h1>
   <p>Un recorrido por los sabores y tradiciones de mi tierra natal</p>
 </header>
 
 <main class="gastronomia-main">
+
+  <!-- BUSCADOR DE COMIDAS (Componente Hijo) -->
+  <!-- @Input: Le pasamos la lista de platos -->
+  <!-- @Output: Recibimos el evento cuando el usuario busca -->
+  <app-buscador 
+    [platos]="platosDisponibles"
+    (platoEncontrado)="irASeccion($event)">
+  </app-buscador>
+
   <section class="intro-gastro">
     <div class="intro-texto">
       <p>
@@ -32,14 +43,14 @@
         de mi pueblo, transmitiéndose de generación en generación.
       </p>
     </div>
-    
+       
     <div class="intro-imagen">
       <img src="../../imagenes/andahuaylas.jpg" alt="Paisaje de Andahuaylas">
       <p class="pie-imagen">Paisaje de Andahuaylas, Apurímac</p>
     </div>
   </section>
 
-  <!-- Los componentes de recetas irán aquí -->
-  <app-andahuaylas></app-andahuaylas>
+  <!-- RECETAS -->
   <app-recetas></app-recetas>
+
 </main>

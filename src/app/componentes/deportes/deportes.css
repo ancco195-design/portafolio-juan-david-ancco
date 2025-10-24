@@ -22,10 +22,10 @@ header p {
   max-width: 800px;
   margin: 30px auto;
   padding: 20px 30px;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  color: white;
+  background: linear-gradient(135deg, #fff8e6, #f0f7ff); /* suave amarillo-crema a azul claro */
+  color: #083344;
   border-radius: 15px;
-  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.15);
+  box-shadow: 0px 6px 15px rgba(6, 36, 43, 0.06);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -38,17 +38,17 @@ header p {
 
 .mensaje-bienvenida button {
   padding: 8px 20px;
-  background: rgba(255, 255, 255, 0.2);
-  color: white;
-  border: 2px solid white;
+  background: rgba(255, 255, 255, 0.9);
+  color: #083344;
+  border: 1px solid rgba(8,51,68,0.08);
   border-radius: 20px;
   cursor: pointer;
   font-weight: 600;
 }
 
 .mensaje-bienvenida button:hover {
-  background: white;
-  color: #667eea;
+  background: #f0f7ff;
+  color: #05627a;
 }
 
 /* Sección Deportes */
@@ -111,14 +111,14 @@ header p {
 }
 
 .bg-animate {
-  background: linear-gradient(-45deg, #c48a1f, #f5663f, #dbf835, #d0db35);
+  background: linear-gradient(-45deg, #e8f7ff, #f7f2ff, #eafaf1, #fff9ec); /* paleta pastel suave */
   background-size: 400% 400%;
-  animation: gradientBG 15s ease infinite;
-  color: white;
+  animation: gradientBG 18s ease infinite;
+  color: #083344;
   padding: 40px 20px;
   text-align: center;
   border-radius: 15px 15px 0 0;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 4px 10px rgba(6, 36, 43, 0.06);
 }
 
 @keyframes gradientBG {
@@ -133,17 +133,17 @@ header p {
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 25px;
   padding: 30px;
-  background: white;
+  background: #fbfdff; /* blanco ligeramente azulado */
   border-radius: 0 0 15px 15px;
-  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.15);
+  box-shadow: 0px 6px 15px rgba(6, 36, 43, 0.04);
 }
 
 /* Tarjeta individual */
 .tarjeta {
-  background: #f8f9fa;
+  background: linear-gradient(180deg, #ffffff, #fbfdff); /* muy sutil */
   border-radius: 12px;
   overflow: hidden;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 4px 10px rgba(6, 36, 43, 0.06);
   transition: all 0.3s ease;
 }
 
@@ -183,14 +183,14 @@ header p {
 }
 
 .tarjeta-link:hover {
-  background: linear-gradient(135deg, #4facfe, #00c6ff);
-  color: white;
+  background: linear-gradient(135deg, #d8f1ff, #dfffea); /* azul claro a verde menta suave */
+  color: #083344;
 }
 
 /* Clase aplicada con [ngClass] - links destacados */
 .link-destacado {
-  background: linear-gradient(135deg, #ffeaa7, #fdcb6e);
-  color: #2d3436;
+  background: linear-gradient(135deg, #fff6e6, #f1f7ff);
+  color: #083344;
   font-weight: 700;
 }
 

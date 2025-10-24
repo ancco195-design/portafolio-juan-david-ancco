@@ -1,0 +1,28 @@
+<div class="buscador-container">
+  <h3>🔍 Busca tu comida favorita de Andahuaylas</h3>
+  
+  <div class="buscador-grupo">
+    <!-- Input con [(ngModel)] para capturar lo que escribe el usuario -->
+    <input 
+      type="text" 
+      [(ngModel)]="comidaBuscada"
+      (keyup.enter)="buscarComida()"
+      placeholder="Escribe tu comida favorita de andahuaylas"
+      class="input-buscar">
+    
+    <!-- Botón para buscar -->
+    <button (click)="buscarComida()" class="btn-buscar">
+      Buscar
+    </button>
+  </div>
+
+  <!-- Mensaje de resultado (mostrado con *ngIf) -->
+  <p *ngIf="mensaje" class="mensaje-resultado">
+    {{ mensaje }}
+  </p>
+
+  <!-- Ayuda para el usuario -->
+  <p class="ayuda-texto">
+    💡 Escribe el nombre completo y presiona Enter o haz clic en Buscar
+  </p>
+</div>
