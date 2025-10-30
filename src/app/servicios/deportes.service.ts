@@ -43,6 +43,12 @@ export class DeportesService {
         nombre: 'FC Barcelona',
         imagen: '../../imagenes/braca.png',
         link: 'https://es.wikipedia.org/wiki/Futbol_Club_Barcelona'
+      },
+      {
+        nombre: 'EPIS 2023-II',
+        imagen: '../../../imagenes/EPIS 2023-II.jpg',
+        link: 'https://www.tiktok.com/@codigo.2023ii.epi?_t=ZS-90zVf01ERsd&_r=1'
+
       }
     ];
   }
