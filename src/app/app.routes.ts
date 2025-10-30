@@ -9,6 +9,7 @@ import { Horario } from './componentes/horario/horario';
 import { Proyectos } from './componentes/proyectos/proyectos';
 import { Dificultades } from './componentes/dificultades/dificultades';
 import { Andahuaylas } from './componentes/gastronomia/andahuaylas/andahuaylas';
+import { Contacto } from './componentes/contacto/contacto';
 
 export const routes: Routes = [
     { path:'', component:Inicio, title:'Inicio'},
@@ -21,5 +22,6 @@ export const routes: Routes = [
     { path:'proyectos', component:Proyectos, title:'Proyectos'},
     { path:'dificultades', component:Dificultades, title:'Dificultades'},
     { path:'andahuaylas', component:Andahuaylas, title:'Andahuaylas'},
+    {path:'contacto', component:Contacto, title:'Contacto'},
     {path: '*', redirectTo: ''},
 ];
